@@ -1,0 +1,580 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+ 
+  *::-webkit-scrollbar {
+    width: 0;
+    height: 0.5rem;
+    transition: 1s;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: #525252;
+    border-radius: 5rem;
+  }
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f6ff;
+    scroll-behavior: smooth;
+    background: transparent;
+}
+header {
+    width: 100%;
+    min-height: 5rem;
+    background: #f9f7ff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0rem 3rem;
+}
+header .logo_mini{
+    width: 200px;
+    height: 80px;
+    background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600928/webPage/LogoExtendidoSka_dxtb2f.png) no-repeat;
+    background-size: contain;
+}
+header .header-nav {
+    padding: 0px 30px;
+    display: flex;
+}
+header .header-nav li {
+    padding: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+}
+header .header-nav li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+header .header-nav li a:hover{
+    color: rgba(0, 0, 0, 0.678);
+}
+header .burger_menu{
+    width: 3rem;
+    height: 3rem;
+    background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600928/webPage/menu_FILL0_wght600_GRAD0_opsz48_vmvn51.png) no-repeat;
+    background-size: contain;
+    display: none;
+    position: relative;
+}
+header .burger_menu .header-nav-responsive{
+    display: none;
+}
+header .burger_menu:hover .header-nav-responsive {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    background: #ffffff;
+    top: 3rem;
+    z-index: 2;
+}
+header .burger_menu:hover .header-nav-responsive li{
+    padding: 1rem 3rem;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.185);
+}
+header .burger_menu:hover .header-nav-responsive li a{
+    text-decoration: none;
+    color: #242424;
+    font-size: 1.2REM;
+    
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    padding: 12rem 0rem;
+    background: hsl(0, 76%, 43%);
+    background-image: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600929/webPage/pexels-cottonbro-4489749_ck13f3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+main .filter{
+    width: 100%;
+    height: 100%;
+    background: #00000050;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+main .main-title {
+    width: 50%;
+    margin-left: 6rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+main .main-title h2{
+    margin: 15px;
+    font-size: 3.2rem;
+}
+
+main .main-title p{
+    margin: 15px;
+    font-size: 1.7rem;
+    letter-spacing: 0.15rem;
+}
+main .main-title button{
+    margin:0px;
+    padding: 0.5rem;
+    border: solid 1px #25d366;
+    border-radius: 3rem;
+    background: #25d366;
+    max-width: 350px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .main-title button a{
+    text-decoration: none;
+}
+main .main-title button:hover {
+    background: #23ca60;
+}
+main .main-title a {
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 0rem 0.5rem;
+    
+}
+.btn-navegar{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 204, 255,0);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+}
+.btn-navegar-dos{
+    position: absolute;
+    bottom: 3rem
+}
+.btn-navegar a img{
+    padding: 0.4rem;
+    position: relative;
+    animation-name: palpitations;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+.btn-navegar a::before{
+    content: "";
+    width: 61px;
+    height: 61px;
+    background: #0084ffa6;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    animation-name: palpitations;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+
+}
+.container-banner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.container-banner .banner{
+    width: 80%;
+    height: max-content;
+    border-radius: 30px;
+    background-color: rgba(207, 13, 13, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: -1rem 1rem 1.5rem rgba(0, 0, 0, 0.3) ;
+}
+.container-banner .banner .banner-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-banner .banner img{
+    width: 100%;
+    min-width: 350px;
+}
+.container-banner .banner .info{
+    width: 50%;
+    min-width: 350px;
+    padding: 0rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+.container-banner .banner .info h3{
+    font-size: 2rem;
+}
+.container-banner .banner .info p{
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+.comoFunciona{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+.comoFunciona .container{
+    background: rgba(250, 251, 255, 0.795);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: initial;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 3rem;
+    box-shadow:inset 0 0 30px rgba(71, 71, 71, 0.3) ;
+}
+.comoFunciona .text-info{
+    padding: 0rem 3rem 1.5rem 3rem;
+    margin: 3rem 0rem;
+    text-align: center; 
+    color: rgb(0, 0, 0);
+}
+.comoFunciona .text-info h4 {
+    font-size: 3rem;
+}
+.comoFunciona .text-info p {
+    font-size: 1.2rem;
+    margin: 0rem 3rem;
+}
+.comoFunciona .card{
+    min-width: 300px;
+    height: auto;
+    background: rgb(255, 255, 255);
+    margin: 0rem 5rem 1rem;
+    border-radius: 30px;
+    box-shadow: 0rem 1.2rem 2rem #38383877;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.comoFunciona .card .card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 0px 0px 30px;
+    background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600929/webPage/pexels-lex-ger-3642618_vaxunk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.comoFunciona .card .card-inf{
+    color: rgb(46, 46, 46);
+    padding: 10px;
+}
+.comoFunciona .card .card-inf h4{
+    font-size: 6rem;
+    color: rgb(40, 131, 236);
+    margin: 15px;
+}
+.comoFunciona .card .card-inf p{
+    color: #383838;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+.confianza{
+    width: 100%;
+    height: auto;
+    margin: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+}
+.confianza .confianza-title{
+    text-align: center;
+}
+.confianza .confianza-title h4 {
+    font-size: 3rem;
+    padding: 2rem;
+    
+}
+.confianza .confianza-title p {
+    font-size: 1.3rem;
+}
+.confianza .confianza-cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: rgb(32, 32, 32);
+}
+.confianza .confianza-cards .confianza-cards_uno:hover{
+    transform: scale(1.1);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.493);
+    background: #e8ecf8;
+    filter: drop-shadow(0px 0px 5px #fff);
+}
+.confianza .confianza-cards .confianza-cards_uno{
+    min-width: 250px;
+    max-width: 300px;
+    height: auto;
+    background: #e8ecf8de;
+    border: 2px solid #fff;
+    margin: 2rem 0rem;
+    border-radius: 30px;
+    padding: 0.8rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.548);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.confianza .confianza-cards .confianza-cards_uno span{
+    font-size: 3rem;
+    margin: 0.1rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+.confianza .confianza-cards .confianza-cards_uno h5{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.confianza .confianza-cards .confianza-cards_uno p{
+    font-size: 1.5rem;
+}
+.dudas{
+    width: 100%;
+    height: auto;
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dudas .info{
+    width: 40%;
+    min-width: 400px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+.dudas .info h4{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.dudas .info p{
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+.dudas .preguntas{
+    width: 40%;
+    position: relative;
+}
+.dudas .preguntas ul{
+    list-style: none;
+}
+.dudas .preguntas ul li{
+    font-size: 1.2rem;
+    margin-bottom: 2.8rem;
+    cursor: pointer;
+}
+.dudas .preguntas ul li::before{
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    left: -30px;
+    background-image: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600927/webPage/add_FILL0_wght500_GRAD200_opsz20_ywglew.png) ;
+}
+.dudas .preguntas ul li span{
+    display: none;
+    margin-top: 2rem;
+}
+
+.contacto{
+    width: 100%;
+    height: auto;
+    background: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #e8ecf8;
+}
+.contacto_info{
+    width: 50%;
+    min-width: 400px;
+    padding: 3rem;
+}
+.contacto_info-title{
+    font-size: 3rem;
+}
+.contacto_info-text{
+    font-size: 1.7rem;
+}
+.contacto .contacto_info{
+    padding: 4rem;
+}
+.contacto .contacto_info .contactoNum-num{
+    border-radius: 80px;
+    border: 1px solid #e8ecf8;
+}
+.contacto .contacto_info .contactoNum-num p{
+    font-size: 1.7rem;
+    padding: 1.8rem;
+}
+
+#active{
+    display: block;
+}
+.js-scroll {
+    opacity: 0;
+    background-color: #ffffff;
+    transform: translateY(0rem);
+    transition: 1s;
+  }
+   
+.container-banner .scrolled {
+    opacity: 1;
+    transform: translateY(-3rem);
+}
+
+
+footer{
+    width: 100%;
+    height: auto;
+    background: #242424;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 1px solid #e8ecf8;
+}
+footer .terminosYcondiciones, 
+footer .logo,
+footer .socials{
+    min-width: 400px;
+    height: auto;
+    margin: 2rem;
+}
+footer .terminosYcondiciones{
+    color: #d6d6d6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+footer .terminosYcondiciones span:hover{
+    color: #fff;
+}
+footer .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .socials{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+footer .socials .logoInsta{
+    width: 5rem;
+    height: 5rem;
+}
+footer .socials .logoFace {
+    width: 5rem;
+    height: 5rem;
+}
+
+@media only screen and (max-width: 500px) {
+    footer .terminosYcondiciones{
+        padding: 0rem 1.5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    main .main-title {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        margin-left: 1rem;
+        align-items: center;
+    }
+    footer {
+        justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0rem 2.5rem;
+    }
+    header .logo_mini{
+        width: 150px;
+    }
+    header .header-nav {
+        display: none;
+    }
+    header .burger_menu{
+        display: block;
+    }
+    .contacto_info{
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+
+
+  @keyframes palpitations {
+    0% {
+        filter: drop-shadow(0px 0px 10px #00b7ee);
+        transform: scale(0.8);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 10px #00b7ee);
+        transform: scale(1);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 10px #00b7ee);
+        transform: scale(0.8);
+    }
+}
