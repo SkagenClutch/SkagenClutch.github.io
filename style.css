@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 * {
     box-sizing: border-box;
@@ -98,7 +97,7 @@ main {
     height: 90vh;
     padding: 12rem 0rem;
     background: hsl(0, 76%, 43%);
-    background-image: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600929/webPage/pexels-cottonbro-4489749_ck13f3.jpg);
+    background-image: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1654547727/webPage/clutch-2755548_1280_eu51y8.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -258,8 +257,9 @@ main .main-title a {
     flex-direction: initial;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding: 3rem;
+    padding: 1rem;
     box-shadow:inset 0 0 30px rgba(71, 71, 71, 0.3) ;
+    position: relative;
 }
 .comoFunciona .text-info{
     padding: 0rem 3rem 1.5rem 3rem;
@@ -278,34 +278,75 @@ main .main-title a {
     min-width: 300px;
     height: auto;
     background: rgb(255, 255, 255);
-    margin: 0rem 5rem 1rem;
+    margin: 0rem 6rem 1rem;
     border-radius: 30px;
     box-shadow: 0rem 1.2rem 2rem #38383877;
     display: flex;
     align-content: center;
     justify-content: center;
+    position: relative;
 }
 .comoFunciona .card .card-img {
     width: 100%;
     height: 100%;
-    border-radius: 30px 0px 0px 30px;
+    border-radius: 30px;
     background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1653600929/webPage/pexels-lex-ger-3642618_vaxunk.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+}
+.comoFunciona #carousel__slide1 .card-img{
+    background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1654623345/webPage/BG-clutch_kbngav.jpg) no-repeat center;
+    background-size: cover;
+}
+.comoFunciona #carousel__slide2 .card-img{
+    background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1654623579/webPage/BG-COLARINES_kyjeds.jpg) no-repeat center;
+    background-size: cover;
+}
+.comoFunciona #carousel__slide3 .card-img{
+    background: url(https://res.cloudinary.com/dg4pjkksu/image/upload/v1654633719/webPage/bg-collain_ivmp9w.jpg) no-repeat center;
+    background-size: cover;
+}
+.comoFunciona .card::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: 30px;
+    background-color: #233642b0;
+    position: absolute;
+    z-index: 1;
+
 }
 .comoFunciona .card .card-inf{
     color: rgb(46, 46, 46);
-    padding: 10px;
+    padding: 1rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .comoFunciona .card .card-inf h4{
     font-size: 6rem;
     color: rgb(40, 131, 236);
-    margin: 15px;
+    margin: 1rem;
 }
 .comoFunciona .card .card-inf p{
-    color: #383838;
-    padding: 2rem;
+    color: #ffffff;
+    padding: 0.2rem;
     font-size: 1.3rem;
+}
+.comoFunciona .card .card-inf a{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 1rem;
+    transition: 0.15s;
+}
+.comoFunciona .card .card-inf a:hover{
+    color: #c6d1d4;
+    cursor: pointer;
 }
 .confianza{
     width: 100%;
@@ -540,6 +581,9 @@ footer .socials .logoFace {
     footer {
         justify-content: center;
     }
+    .comoFunciona .card{
+        margin: 0rem 2rem 1rem;
+    }
   }
 
   @media only screen and (max-width: 800px) {
@@ -560,6 +604,9 @@ footer .socials .logoFace {
     .contacto_info{
         width: 100%;
         text-align: center;
+    }
+    .comoFunciona .card{
+        margin: 0rem 4rem 1rem;
     }
   }
 
